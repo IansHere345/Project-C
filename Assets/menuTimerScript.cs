@@ -10,6 +10,10 @@ public class menuTimerScript : MonoBehaviour
     public TextMeshProUGUI MenuTimerText;
     public string LevelTransitionName = "Level1Scene";
     //private bool isLoadingScene = false;
+    public GameObject ControlsButton;
+    public GameObject GuideButton;
+    public GameObject OptionsButton;
+    public GameObject CreditsButton;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,6 +26,10 @@ public class menuTimerScript : MonoBehaviour
     {
         if (TimerOn)
         {
+            ControlsButton.SetActive(false);
+            GuideButton.SetActive(false);
+            OptionsButton.SetActive(false);
+            CreditsButton.SetActive(false);
             MenuTimerText.enabled = true;
             //enables the text once players ready up.
             if (timeLeft > 0)
@@ -34,7 +42,7 @@ public class menuTimerScript : MonoBehaviour
                 timeLeft = 0;
                 TimerOn = false;
                 //isLoadingScene = true;
-            SceneManager.LoadScene(LevelTransitionName);
+                SceneManager.LoadScene(LevelTransitionName);
             }
         }
     }
@@ -48,3 +56,6 @@ public class menuTimerScript : MonoBehaviour
     }
 }
 //Source Used: https://youtube.com/shorts/hxpUk0qiRGs?si=C1-azELwIE4sN_g0
+
+//The Colored text on the title screen is done using <color=insert color here>Insert word here
+//The Source for that: https://www.youtube.com/watch?v=kWAd7Qtn_Tw&t=68s

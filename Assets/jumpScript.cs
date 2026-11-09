@@ -7,8 +7,8 @@ public class JumpScript : MonoBehaviour
     public bool WASD; //This is needed for the script to work with both players, not just one
     private Rigidbody rb;
     private bool isJumping;
-    public float fallMultiplier = 3.5f;
-    public float jumpSpeedMultiplier = 3.5f;
+    public float fallMultiplier = 3.0f;
+    public float jumpSpeedMultiplier = 3.0f;
     // Start is called before the first frame update
     void Start()
     {
